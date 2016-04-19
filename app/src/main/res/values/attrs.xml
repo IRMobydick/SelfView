@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleView">
+        <attr name="circleStrokeWidth" format="dimension"></attr>
+        <attr name="startAngle" format="integer"></attr>
+        <attr name="DefaultSweepAngle" format="integer"></attr>
+        <attr name="SweepAngle" format="integer"></attr>
+        <attr name="defalutColor" format="color"></attr>
+        <attr name="foreColor" format="color"></attr>
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="ColumnView">
+        <attr name="column_foreColor" format="color"></attr>
+    </declare-styleable>
+</resources>
