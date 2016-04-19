@@ -130,11 +130,6 @@ public class CircleView extends View {
         mColorWheelRectangle.set(mColorWheelLeft,mColorWheelTop,mColorWheelRight,mColorWheelBottom);
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
     }
-
-    private float dip2px(Context context, int dipValue) {
-        final float scale = context.getResources().getDisplayMetrics().density;
-        return (int)(dipValue * scale + 0.5f);
-    }
     public class BarAnimation extends Animation{
         @Override
         protected void applyTransformation(float interpolatedTime, Transformation t) {
