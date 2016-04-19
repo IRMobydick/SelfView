@@ -23,8 +23,6 @@ import keyboard3.com.selfviewdemo.R;
  * <p/>
  * 版     权 ： keyboard3 所有
  * <p/>
- * 作     者  :  甘春雨
- * <p/>
  * 版     本 ： 1.0
  * <p/>
  * 创 建日期 ： 2016/4/16
@@ -121,34 +119,6 @@ public class CircleView extends View {
         canvas.drawArc(mColorWheelRectangle, startAngle,mSweepAnglePer,false,mColorWheelPaint);//颜色轮
     }
 
-    /**
-     * 计算圆弧的角度上的点的坐标x
-     * @param x 圆弧中心点坐标x
-     * @param angle 偏移过的角度
-     * @param radius 半径
-     * @return
-     */
-    private float calcXLocationInWheel(float x, float angle, float radius) {
-        angle=(360+angle)%360;
-        float result=(float) (x+Math.cos(Math.toRadians(angle))*radius);
-        if(Math.cos(Math.toRadians(angle))>1) result=x;
-
-        return result;
-    }
-    /**
-     * 计算圆弧角度上的点的坐标y
-     * @param y 圆弧中心点的坐标y
-     * @param angle 偏移过的角度
-     * @param radius 半径
-     * @return
-     */
-    private float calcYLocationInWheel(float y,float angle, float radius) {
-        angle=(360+angle)%360;
-        float result=(float) (y+Math.sin(Math.toRadians(angle))*radius);
-        if(Math.sin(Math.toRadians(angle))>1) result=y;
-        return result;
-    }
-
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int width=getDefaultSize(getSuggestedMinimumWidth(),widthMeasureSpec);;
@@ -182,6 +152,6 @@ public class CircleView extends View {
         this.linstener=linstener;
     }
     public interface processChangeLinstener{
-       public void onProcessChange(float interpolatedTime);
+       void onProcessChange(float interpolatedTime);
     }
 }

@@ -42,6 +42,5 @@ public class MainActivity extends AppCompatActivity {
         });
         view_line = findViewById(R.id.view_line);
         view_line.setLayerType(View.LAYER_TYPE_SOFTWARE,null);
-
     }
 }
