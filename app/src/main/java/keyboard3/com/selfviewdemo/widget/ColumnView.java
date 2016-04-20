@@ -1,4 +1,4 @@
-package keyboard3.com.selfviewdemo.View;
+package keyboard3.com.selfviewdemo.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -13,7 +13,7 @@ import keyboard3.com.selfviewdemo.R;
 
 /**
  * Desc:
- * Author: ganchunyu
+ * Author: keyboard3
  * Date: 2016-04-19 13:29
  */
 public class ColumnView extends View {

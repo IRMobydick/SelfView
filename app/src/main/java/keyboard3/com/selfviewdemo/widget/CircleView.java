@@ -1,4 +1,4 @@
-package keyboard3.com.selfviewdemo.View;
+package keyboard3.com.selfviewdemo.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -23,7 +23,6 @@ import keyboard3.com.selfviewdemo.R;
  * <p/>
  * 版     权 ： keyboard3 所有
  * <p/>
- * 作     者  :  甘春雨
  * <p/>
  * 版     本 ： 1.0
  * <p/>
@@ -87,10 +86,10 @@ public class CircleView extends View {
         mColorWheelPaint.setColor(foreColor);
         mColorWheelPaint.setStyle(Paint.Style.STROKE);
         mColorWheelPaint.setStrokeWidth(circleStrokeWidth);
-        mColorWheelPaint.setDither(true);//防抖动
-        mColorWheelPaint.setStrokeJoin(Paint.Join.ROUND);//设置笔画的连接处 圆滑
-        mColorWheelPaint.setStrokeCap(Paint.Cap.ROUND);//设置笔画离开点 圆滑
-        mColorWheelPaint.setPathEffect(new CornerPathEffect(10));//CornerPathEffect则可以将路径的转角变得圆滑
+        mColorWheelPaint.setDither(true);
+        mColorWheelPaint.setStrokeJoin(Paint.Join.ROUND);
+        mColorWheelPaint.setStrokeCap(Paint.Cap.ROUND);
+        mColorWheelPaint.setPathEffect(new CornerPathEffect(10));
 
         mDefaultWheelPaint=new Paint(Paint.ANTI_ALIAS_FLAG);
         mDefaultWheelPaint.setColor(defalutColor);
@@ -120,6 +119,35 @@ public class CircleView extends View {
         canvas.drawArc(mColorWheelRectangle,startAngle,mDefaultSweepAngle,false,mDefaultWheelPaint);//默认轮
         canvas.drawArc(mColorWheelRectangle, startAngle,mSweepAnglePer,false,mColorWheelPaint);//颜色轮
     }
+
+    /**
+     * 计算圆弧的角度上的点的坐标x
+     * @param x 圆弧中心点坐标x
+     * @param angle 偏移过的角度
+     * @param radius 半径
+     * @return
+     */
+    private float calcXLocationInWheel(float x, float angle, float radius) {
+        angle=(360+angle)%360;
+        float result=(float) (x+Math.cos(Math.toRadians(angle))*radius);
+        if(Math.cos(Math.toRadians(angle))>1) result=x;
+
+        return result;
+    }
+    /**
+     * 计算圆弧角度上的点的坐标y
+     * @param y 圆弧中心点的坐标y
+     * @param angle 偏移过的角度
+     * @param radius 半径
+     * @return
+     */
+    private float calcYLocationInWheel(float y,float angle, float radius) {
+        angle=(360+angle)%360;
+        float result=(float) (y+Math.sin(Math.toRadians(angle))*radius);
+        if(Math.sin(Math.toRadians(angle))>1) result=y;
+        return result;
+    }
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         int width=getDefaultSize(getSuggestedMinimumWidth(),widthMeasureSpec);;

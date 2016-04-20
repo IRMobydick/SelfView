@@ -20,6 +20,11 @@ import android.widget.ImageView;
 import keyboard3.com.selfviewdemo.R;
 
 
+/**
+ * Created by zhukkun on 16/2/22.
+ */
+
+
 public class CircleImageView extends ImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;
