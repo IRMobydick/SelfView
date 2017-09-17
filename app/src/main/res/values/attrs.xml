@@ -1,18 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <declare-styleable name="CircleView">
-        <attr name="circleStrokeWidth" format="dimension"></attr>
-        <attr name="startAngle" format="integer"></attr>
-        <attr name="DefaultSweepAngle" format="integer"></attr>
-        <attr name="SweepAngle" format="integer"></attr>
-        <attr name="defalutColor" format="color"></attr>
+    <declare-styleable name="HealthCircleView">
+        <attr name="strokeWidth" format="dimension"></attr>
+        <attr name="textVerticalMargin" format="dimension"></attr>
+        <attr name="normalTxtSize" format="dimension"></attr>
+        <attr name="bigTxtSize" format="dimension"></attr>
+        <attr name="openAngle" format="integer"></attr>
+        <attr name="stepNum" format="integer"></attr>
+        <attr name="allNum" format="integer"></attr>
+        <attr name="backColor" format="color"></attr>
         <attr name="foreColor" format="color"></attr>
+        <attr name="topTxt" format="string"></attr>
+        <attr name="bottomTxt" format="string"></attr>
+        <attr name="order" format="integer"></attr>
+        <attr name="orderLetterSpacing" format="integer"></attr>
     </declare-styleable>
     <declare-styleable name="CircleImageView">
         <attr name="border_width" format="dimension" />
         <attr name="border_color" format="color" />
     </declare-styleable>
-    <declare-styleable name="ColumnView">
-        <attr name="column_foreColor" format="color"></attr>
+    <declare-styleable name="HealthColumnsView">
+        <attr name="columnColor" format="color"></attr>
+        <attr name="textColor" format="color"></attr>
+        <attr name="columnsValues" format="reference"></attr>
+        <attr name="textSize" format="dimension"></attr>
+        <attr name="strokeWith" format="dimension"></attr>
+        <attr name="averageTitle" format="string"></attr>
+        <attr name="recentTitle" format="string"></attr>
+        <attr name="topSpace" format="dimension"></attr>
+        <attr name="startDay" format="integer"></attr>
     </declare-styleable>
 </resources>

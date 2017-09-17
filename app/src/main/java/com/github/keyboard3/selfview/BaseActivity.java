@@ -17,7 +17,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public String TAG = "gcy";
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
-    public QQHelthFragment qqHelthFragment;
+    public QQHealthFragment qqHelthFragment;
     public Toolbar toolbar;
 
     @Override
@@ -25,7 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(initViewId());
         initBar();
-        qqHelthFragment = QQHelthFragment.newInstance();
+        qqHelthFragment = QQHealthFragment.newInstance();
         initView();
     }
 

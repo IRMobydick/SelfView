@@ -13,226 +13,41 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/heal_bg">
 
-        <com.github.keyboard3.selfview.View.CircleView
+        <com.github.keyboard3.selfview.View.HealthCircleView
             android:id="@+id/rl_circle"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp" />
+            android:layout_marginTop="5dp"
+            app:allNum="10000"
+            app:backColor="#CAEEF3"
+            app:bigTxtSize="36sp"
+            app:bottomTxt="好友平均2961步"
+            app:foreColor="#00A5E0"
+            app:normalTxtSize="16sp"
+            app:openAngle="60"
+            app:order="1"
+            app:orderLetterSpacing="1"
+            app:stepNum="6753"
+            app:strokeWidth="10dp"
+            app:textVerticalMargin="20dp"
+            app:topTxt="截止22:48已走" />
 
-        <RelativeLayout
+        <com.github.keyboard3.selfview.View.HealthColumnsView
             android:layout_width="match_parent"
-            android:layout_height="70dp"
+            android:layout_height="80dp"
             android:layout_below="@id/rl_circle"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="20dp">
-
-            <View
-                android:id="@+id/view_line"
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:layout_marginTop="20dp"
-                android:background="@drawable/liner" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="最近7天"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="10sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:text="平均2961步"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="10sp" />
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp"
-                    android:layout_weight="1">
-
-                    <com.github.keyboard3.selfview.widget.ColumnView
-                        android:id="@+id/cv1"
-                        android:layout_width="11dp"
-                        android:layout_height="25dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        app:column_foreColor="#00A5E0" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cv1"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:text="11日"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="10sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp"
-                    android:layout_weight="1">
-
-                    <com.github.keyboard3.selfview.widget.ColumnView
-                        android:id="@+id/cv2"
-                        android:layout_width="11dp"
-                        android:layout_height="25dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        app:column_foreColor="#00A5E0" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cv2"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:text="12日"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="10sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp"
-                    android:layout_weight="1">
-
-                    <com.github.keyboard3.selfview.widget.ColumnView
-                        android:id="@+id/cv3"
-                        android:layout_width="11dp"
-                        android:layout_height="25dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        app:column_foreColor="#00A5E0" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cv3"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:text="13日"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="10sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp"
-                    android:layout_weight="1">
-
-                    <com.github.keyboard3.selfview.widget.ColumnView
-                        android:id="@+id/cv4"
-                        android:layout_width="11dp"
-                        android:layout_height="25dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        app:column_foreColor="#00A5E0" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cv4"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:text="14日"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="10sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp"
-                    android:layout_weight="1">
-
-                    <com.github.keyboard3.selfview.widget.ColumnView
-                        android:id="@+id/cv5"
-                        android:layout_width="11dp"
-                        android:layout_height="25dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        app:column_foreColor="#00A5E0" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cv5"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:text="15日"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="10sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp"
-                    android:layout_weight="1">
-
-                    <com.github.keyboard3.selfview.widget.ColumnView
-                        android:id="@+id/cv6"
-                        android:layout_width="11dp"
-                        android:layout_height="11dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        app:column_foreColor="#1111" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cv6"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:text="16日"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="10sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="17dp"
-                    android:layout_weight="1">
-
-                    <com.github.keyboard3.selfview.widget.ColumnView
-                        android:id="@+id/cv7"
-                        android:layout_width="11dp"
-                        android:layout_height="11dp"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="15dp"
-                        app:column_foreColor="#1111" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@id/cv7"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginTop="5dp"
-                        android:text="17日"
-                        android:textColor="@android:color/darker_gray"
-                        android:textSize="10sp" />
-                </RelativeLayout>
-            </LinearLayout>
-        </RelativeLayout>
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:averageTitle="平均2961步"
+            app:columnColor="#00A5E0"
+            app:columnsValues="@array/columnsValues"
+            app:recentTitle="最近7天"
+            app:strokeWith="10dp"
+            app:startDay="11"
+            app:textColor="@android:color/darker_gray"
+            app:textSize="12sp"
+            app:topSpace="10dp" />
 
         <RelativeLayout
             android:layout_width="match_parent"
