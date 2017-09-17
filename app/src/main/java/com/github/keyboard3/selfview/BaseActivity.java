@@ -1,4 +1,4 @@
-package keyboard3.com.selfviewdemo;
+package com.github.keyboard3.selfview;
 
 import android.app.FragmentManager;
 import android.os.Bundle;
@@ -7,8 +7,6 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * Desc:
@@ -16,41 +14,37 @@ import butterknife.ButterKnife;
  * Date: 2016-04-20 10:32
  */
 public abstract class BaseActivity extends AppCompatActivity {
-    public  String TAG="gcy";
+    public String TAG = "gcy";
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
-    public  QQHelthFragment qqHelthFragment;
-    @Bind(R.id.toolbar)
+    public QQHelthFragment qqHelthFragment;
     public Toolbar toolbar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(initViewId());
-        ButterKnife.bind(this);
         initBar();
         qqHelthFragment = QQHelthFragment.newInstance();
         initView();
     }
-    protected void replaceFragment(int resIs,Fragment fragment){
+
+    protected void replaceFragment(int resIs, Fragment fragment) {
         fragmentTransaction = getSupportFragmentManager().beginTransaction();
-        fragmentTransaction.replace(resIs,fragment);
+        fragmentTransaction.replace(resIs, fragment);
         fragmentTransaction.commit();
     }
-    private void initBar(){
-        if(toolbar!=null){
+
+    private void initBar() {
+        toolbar = findViewById(R.id.toolbar);
+        if (toolbar != null) {
             setSupportActionBar(toolbar);
             assert getSupportActionBar() != null;
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
-    protected abstract void initView();
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ButterKnife.unbind(this);
-    }
+    protected abstract void initView();
 
     protected abstract int initViewId();
 }

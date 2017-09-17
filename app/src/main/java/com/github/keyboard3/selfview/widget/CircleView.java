@@ -1,4 +1,4 @@
-package keyboard3.com.selfviewdemo.widget;
+package com.github.keyboard3.selfview.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -16,7 +16,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 
-import keyboard3.com.selfviewdemo.R;
+import com.github.keyboard3.selfview.R;
 
 /**
  * ============================================================

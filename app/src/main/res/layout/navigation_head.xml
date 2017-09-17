@@ -10,7 +10,7 @@
         android:scaleType="centerCrop"
         android:src="@drawable/head_bg" />
 
-    <keyboard3.com.selfviewdemo.widget.CircleImageView
+    <com.github.keyboard3.selfview.widget.CircleImageView
         android:id="@+id/civ_head"
         android:layout_width="50dp"
         android:layout_height="50dp"

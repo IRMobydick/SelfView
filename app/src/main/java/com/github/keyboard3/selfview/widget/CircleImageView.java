@@ -1,4 +1,4 @@
-package keyboard3.com.selfviewdemo.widget;
+package com.github.keyboard3.selfview.widget;
 
 
 import android.content.Context;
@@ -15,9 +15,8 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
-import android.widget.ImageView;
 
-import keyboard3.com.selfviewdemo.R;
+import com.github.keyboard3.selfview.R;
 
 
 /**
@@ -25,7 +24,7 @@ import keyboard3.com.selfviewdemo.R;
  */
 
 
-public class CircleImageView extends ImageView {
+public class CircleImageView extends android.support.v7.widget.AppCompatImageView {
 
     private static final ScaleType SCALE_TYPE = ScaleType.CENTER_CROP;
 
@@ -66,6 +65,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 重写构造方法
+     *
      * @param context
      * @param attrs
      * @param defStyle
@@ -91,6 +91,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 获取ImageView的ScaleType属性
+     *
      * @return
      */
     @Override
@@ -100,6 +101,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 设置scaleType属性
+     *
      * @param scaleType
      */
     @Override
@@ -111,6 +113,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 绘制圆形
+     *
      * @param canvas
      */
     @Override
@@ -125,6 +128,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 系统回调方法
+     *
      * @param w
      * @param h
      * @param oldw
@@ -138,6 +142,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 获取边框颜色
+     *
      * @return
      */
     public int getBorderColor() {
@@ -146,6 +151,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 设置边框颜色
+     *
      * @param borderColor
      */
     public void setBorderColor(int borderColor) {
@@ -160,6 +166,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 获取边框宽度
+     *
      * @return
      */
     public int getBorderWidth() {
@@ -168,6 +175,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 设置边框宽度
+     *
      * @param borderWidth
      */
     public void setBorderWidth(int borderWidth) {
@@ -181,6 +189,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 设置bitmap
+     *
      * @param bm
      */
     @Override
@@ -192,6 +201,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 设置显示drawable
+     *
      * @param drawable
      */
     @Override
@@ -203,6 +213,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 设置图片资源
+     *
      * @param resId
      */
     @Override
@@ -214,6 +225,7 @@ public class CircleImageView extends ImageView {
 
     /**
      * 根据drawable返回bitmap对象
+     *
      * @param drawable
      * @return
      */

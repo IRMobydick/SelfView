@@ -1,4 +1,4 @@
-package keyboard3.com.selfviewdemo.View;
+package com.github.keyboard3.selfview.View;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,10 +6,9 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
-import keyboard3.com.selfviewdemo.R;
+import com.github.keyboard3.selfview.R;
 
 /**
  * Desc:

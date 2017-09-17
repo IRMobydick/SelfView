@@ -1,19 +1,15 @@
-package keyboard3.com.selfviewdemo;
+package com.github.keyboard3.selfview;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import butterknife.Bind;
-import butterknife.OnClick;
-import keyboard3.com.selfviewdemo.widget.CircleView;
+
+import com.github.keyboard3.selfview.widget.CircleView;
 
 public class QQHelthFragment extends BaseFragment {
-    @Bind(R.id.tv_num)
     TextView tvNum;
-    @Bind(R.id.view_line)
     View viewLine;
-    @Bind(R.id.circle)
     CircleView circle;
     private int process = 13140;
 
@@ -23,6 +19,7 @@ public class QQHelthFragment extends BaseFragment {
         fragment.setArguments(args);
         return fragment;
     }
+
     @Override
     protected int initContentViewId() {
         return R.layout.fragment_qqhelth;
@@ -31,7 +28,15 @@ public class QQHelthFragment extends BaseFragment {
     @Override
     protected void initView() {
         super.initView();
-
+       /* circle = getView().findViewById(R.id.circle);
+        viewLine = getView().findViewById(R.id.view_line);
+        tvNum = getView().findViewById(R.id.tv_num);
+        circle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                circle.startCustomAnimation();
+            }
+        });
         circle.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -44,10 +49,6 @@ public class QQHelthFragment extends BaseFragment {
                 tvNum.setText((int) (process * interpolatedTime) + "");
             }
         });
-        viewLine.setLayerType(View.LAYER_TYPE_SOFTWARE, null);//设置虚线
-    }
-    @OnClick(R.id.circle)
-    public void onClick() {
-        circle.startCustomAnimation();
+        viewLine.setLayerType(View.LAYER_TYPE_SOFTWARE, null);//设置虚线*/
     }
 }
