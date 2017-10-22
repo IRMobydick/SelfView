@@ -13,7 +13,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/heal_bg">
 
-        <com.github.keyboard3.selfview.View.HealthCircleView
+        <com.github.keyboard3.selfview.view.HealthCircleView
             android:id="@+id/rl_circle"
             android:layout_width="250dp"
             android:layout_height="250dp"
@@ -33,7 +33,7 @@
             app:textVerticalMargin="20dp"
             app:topTxt="截止22:48已走" />
 
-        <com.github.keyboard3.selfview.View.HealthColumnsView
+        <com.github.keyboard3.selfview.view.HealthColumnsView
             android:layout_width="match_parent"
             android:layout_height="80dp"
             android:layout_below="@id/rl_circle"

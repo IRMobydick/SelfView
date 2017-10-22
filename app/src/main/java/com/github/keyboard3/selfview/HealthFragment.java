@@ -2,11 +2,16 @@ package com.github.keyboard3.selfview;
 
 import android.os.Bundle;
 
-public class QQHealthFragment extends BaseFragment {
+/**
+ * QQ 健康
+ *
+ * @author keyboard
+ */
+public class HealthFragment extends BaseFragment {
 
-    public static QQHealthFragment newInstance() {
+    public static HealthFragment newInstance() {
         Bundle args = new Bundle();
-        QQHealthFragment fragment = new QQHealthFragment();
+        HealthFragment fragment = new HealthFragment();
         fragment.setArguments(args);
         return fragment;
     }

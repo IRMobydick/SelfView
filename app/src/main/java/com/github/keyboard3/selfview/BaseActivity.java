@@ -9,15 +9,15 @@ import android.support.v7.widget.Toolbar;
 
 
 /**
- * Desc:
- * Author: ganchunyu
- * Date: 2016-04-20 10:32
+ * 基类
+ *
+ * @author keyboard3
  */
 public abstract class BaseActivity extends AppCompatActivity {
     public String TAG = "gcy";
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
-    public QQHealthFragment qqHelthFragment;
+    public Fragment fragment;
     public Toolbar toolbar;
 
     @Override
@@ -25,7 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(initViewId());
         initBar();
-        qqHelthFragment = QQHealthFragment.newInstance();
+        fragment = FlipboardFragment.newInstance();
         initView();
     }
 

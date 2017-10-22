@@ -1,4 +1,4 @@
-package com.github.keyboard3.selfview.View;
+package com.github.keyboard3.selfview.view;
 
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
@@ -20,7 +20,10 @@ import android.view.View;
 import com.github.keyboard3.selfview.R;
 
 /**
- * Created by keyboard3 on 2017/9/17.
+ * 健康圈自定义View
+ *
+ * @author keyboard3
+ * @date 2017/9/17
  */
 
 public class HealthCircleView extends View {
@@ -115,7 +118,7 @@ public class HealthCircleView extends View {
         super.onDraw(canvas);
         int startAngle = 90 + openAngle / 2;
         int sweepAngle = 360 - openAngle;
-        int drawAngle = (int) (sweepAngle * (1.0f * stepNum / allNum));//实际内容的弧度
+        int drawAngle = (int) (sweepAngle * (1.0f * stepNum / allNum));
         canvas.drawArc(circleRectangle, startAngle, sweepAngle, false, backPaint);
         canvas.drawArc(circleRectangle, startAngle, drawAngle, false, forePaint);
         canvas.drawText(stepNum + "", centerPointer.x, centerPointer.y + bigFontRect.height() / 2, bigTxtPaint);
@@ -124,7 +127,7 @@ public class HealthCircleView extends View {
 
 
         //计算最底部排名
-        float numY = (float) ((1 + Math.abs(Math.sin(openAngle / 2))) * radius);//最底部文字的高度
+        float numY = (float) ((1 + Math.abs(Math.sin(openAngle / 2))) * radius);
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             normalTxtPaint.setLetterSpacing(orderLetterSpacing);
@@ -143,8 +146,8 @@ public class HealthCircleView extends View {
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
-        int width = getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec);
-        int height = getDefaultSize(getSuggestedMinimumHeight(), heightMeasureSpec);
+        int width = getMeasuredWidth();
+        int height = getMeasuredHeight();
         int min = Math.min(width, height);
         circleRectangle.top = circleRectangle.left = 0 + strokeWidth;
         circleRectangle.bottom = circleRectangle.right = min - strokeWidth;

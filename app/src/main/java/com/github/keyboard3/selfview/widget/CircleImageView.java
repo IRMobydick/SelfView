@@ -20,7 +20,10 @@ import com.github.keyboard3.selfview.R;
 
 
 /**
- * Created by zhukkun on 16/2/22.
+ * 圆形View
+ *
+ * @author keyboard3
+ * @date 16/2/22
  */
 
 
