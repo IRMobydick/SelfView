@@ -5,7 +5,7 @@
 <img src="/images/qqHealth.gif" width="350">
 
 ## 使用
-<img src="/images/code.png" width="350">
+<img src="/images/code.png" width="400">
 
 ## 关于我
 
