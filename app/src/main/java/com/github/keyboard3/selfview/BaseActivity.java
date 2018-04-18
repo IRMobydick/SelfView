@@ -25,7 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(initViewId());
         initBar();
-        fragment = FlipboardFragment.newInstance();
+        fragment = HealthFragment.newInstance();
         initView();
     }
 
